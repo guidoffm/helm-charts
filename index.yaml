@@ -1,14 +1,13 @@
 apiVersion: v1
 entries:
-  helm-chart-test:
+  sns-forwarder:
   - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2020-09-07T17:06:05.975585+02:00"
-    description: A Helm chart for Kubernetes
-    digest: ec710926b3212ee57091a49a738707279fffc670da6c3e6b2777c915aa819e9d
-    name: helm-chart-test
+    created: "2020-09-08T09:20:57.0336957+02:00"
+    description: A Helm chart for SNS Forwarder
+    digest: 790a659091cd624eb462188859e4fc6c26d5efaaed421b5ac28539b1339f4770
+    name: sns-forwarder
     type: application
     urls:
-    - https://guidoffm.github.io/helm-charts/helm-chart-test-0.1.0.tgz
-    version: 0.1.0
-generated: "2020-09-07T17:06:05.974384+02:00"
+    - sns-forwarder-1.0.0.tgz
+    version: 1.0.0
+generated: "2020-09-08T09:20:57.0135174+02:00"
