@@ -5,13 +5,17 @@ Sns-Forwarder is a helper program to send Prometheus alerts to AWS SNS.
 ## Prerequisites
 
 - Kubernetes 1.7+
+- Make shure to have the permission to publish to the SNS topic. This can be achieved in
+  two ways:
+  - The recommended way: [IAM roles for service accounts](https://docs.aws.amazon.com/eks/latest/userguide/iam-roles-for-service-accounts.html)
+  - Assign the permission to the IAM role for the worker node group
 
 ## Installing the Chart
 
 To install the chart with the release name `my-release`:
 
 ```console
-## Install the helm chart
+# Install the helm chart
 $ helm install --name my-release guidoffm/sns-forwarder
 ```
 
@@ -20,7 +24,7 @@ $ helm install --name my-release guidoffm/sns-forwarder
 To uninstall/delete the `my-release` deployment:
 
 ```console
-## Uninstall the helm chart
+# Uninstall the helm chart
 $ helm delete my-release
 ```
 
@@ -38,7 +42,7 @@ The following table lists the configurable parameters of the cert-manager chart 
 | `image.tag` | Image tag | `latest` |
 | `image.pullPolicy` | Image pull policy | `IfNotPresent` |
 | `replicaCount`  | Number of pod replicas  | `1` |
-| `serviceAccount.annotations` | A list of annotations to add to the servce account | `[]` ]
+| `serviceAccount.annotations` | A list of annotations to add to the servce account | `[]`
 
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
@@ -46,7 +50,7 @@ Alternatively, a YAML file that specifies the values for the above parameters ca
 
 ```console
 # Install the helm chart
-$ helm install --name my-release -f values.yaml .
+$ helm install --name my-release -f values.yaml guidoffm/sns-forwarder
 ```
 
 > **Tip**: You can use the default [values.yaml](values.yaml)
