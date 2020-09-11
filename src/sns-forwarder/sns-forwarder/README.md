@@ -57,4 +57,4 @@ $ helm install --name my-release -f values.yaml guidoffm/sns-forwarder
 
 ## Contributing
 
-This chart is maintained at [github.com/guidoffm/helm-charts](https://github.com/guidoffm/helm-charts).
+This chart is maintained at [github.com/guidoffm/helm-charts/sns-forwarder](https://github.com/guidoffm/helm-charts/sns-forwarder).
