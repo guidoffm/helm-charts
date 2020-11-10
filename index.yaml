@@ -1,11 +1,22 @@
 apiVersion: v1
 entries:
+  mqtt-blackbox-exporter:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-11-10T16:08:22.94014+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 4138e922bb24e0cf00a8d0c08fda819922f3bece4f9d296d276159386e79822d
+    name: mqtt-blackbox-exporter
+    type: application
+    urls:
+    - mqtt-blackbox-exporter-0.1.0.tgz
+    version: 0.1.0
   smtp:
   - apiVersion: v2
     appVersion: latest
-    created: "2020-11-10T16:04:22.207085+01:00"
+    created: "2020-11-10T16:08:22.940491+01:00"
     description: A Helm chart for SMTP
-    digest: f45918563ecaf8568138ff3786814bea817cfc93e3d083fd1f70fcfa2b7e93e8
+    digest: 9e4ceef94bbd2c56a3c3f473a1e66cf601497436865cbfabf6f8f4c55e78124a
     name: smtp
     type: application
     urls:
@@ -13,12 +24,12 @@ entries:
     version: 0.1.0
   sns-forwarder:
   - apiVersion: v2
-    created: "2020-11-10T16:04:22.20754+01:00"
+    created: "2020-11-10T16:08:22.940933+01:00"
     description: A Helm chart for SNS Forwarder
-    digest: da22e93a5d9a0f0324565e73c032a3f6efd13fbad25c35a11124125d3e3b02fe
+    digest: 794dbfc5aa536cafe2539cf7f3584ba8292c478435e6e903d2fcf2ad70ed81db
     name: sns-forwarder
     type: application
     urls:
     - sns-forwarder-1.0.0.tgz
     version: 1.0.0
-generated: "2020-11-10T16:04:22.206581+01:00"
+generated: "2020-11-10T16:08:22.939448+01:00"
