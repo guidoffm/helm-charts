@@ -1,13 +1,24 @@
 apiVersion: v1
 entries:
+  smtp:
+  - apiVersion: v2
+    appVersion: latest
+    created: "2020-11-10T15:57:46.543334+01:00"
+    description: A Helm chart for SMTP
+    digest: 940f4d76d5df70858742ed9b127b89099ad763f975cb000690ad47c54dd35278
+    name: smtp
+    type: application
+    urls:
+    - smtp-0.1.0.tgz
+    version: 0.1.0
   sns-forwarder:
   - apiVersion: v2
-    created: "2020-09-08T09:20:57.0336957+02:00"
+    created: "2020-11-10T15:57:46.54381+01:00"
     description: A Helm chart for SNS Forwarder
-    digest: 790a659091cd624eb462188859e4fc6c26d5efaaed421b5ac28539b1339f4770
+    digest: a08d5c9112e5ba08b87b3e2fea9b230dcc71615d8828a0cc2e9fa431a71dce0f
     name: sns-forwarder
     type: application
     urls:
     - sns-forwarder-1.0.0.tgz
     version: 1.0.0
-generated: "2020-09-08T09:20:57.0135174+02:00"
+generated: "2020-11-10T15:57:46.542737+01:00"
