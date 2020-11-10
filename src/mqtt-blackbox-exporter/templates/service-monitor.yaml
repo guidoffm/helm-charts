@@ -3,7 +3,7 @@ kind: ServiceMonitor
 metadata:
   name: {{ include "mqtt-blackbox-exporter.fullname" . }}
   labels:
-    release: prom
+    release: {{ .Values.prometheusReleaseName }}
 spec:
   endpoints:
   - path: /metrics

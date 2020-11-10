@@ -3,7 +3,17 @@ entries:
   mqtt-blackbox-exporter:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2020-11-10T16:16:45.05661+01:00"
+    created: "2020-11-10T17:03:41.102368+01:00"
+    description: A Helm chart for MQTT Blackbox Exporter
+    digest: 449ab5d766af37974a18e25e9e823d13096b17a9b11d60811c4a47df70a1ac9d
+    name: mqtt-blackbox-exporter
+    type: application
+    urls:
+    - mqtt-blackbox-exporter-0.2.2.tgz
+    version: 0.2.2
+  - apiVersion: v2
+    appVersion: 0.0.1
+    created: "2020-11-10T17:03:41.101849+01:00"
     description: A Helm chart for MQTT Blackbox Exporter
     digest: 58029d86fb26de39eaf4aca039bda8ff150829384f231a237e202a46a5c0c607
     name: mqtt-blackbox-exporter
@@ -13,7 +23,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-11-10T16:16:45.056187+01:00"
+    created: "2020-11-10T17:03:41.101446+01:00"
     description: A Helm chart for MQTT Blackbox Exporter
     digest: c1a8b64d7e52c3599686813f80f3665034c50bc3a6ec35320a50f32ee8bdc5db
     name: mqtt-blackbox-exporter
@@ -24,9 +34,9 @@ entries:
   smtp:
   - apiVersion: v2
     appVersion: latest
-    created: "2020-11-10T16:16:45.056966+01:00"
+    created: "2020-11-10T17:03:41.102859+01:00"
     description: A Helm chart for SMTP
-    digest: 833d625a818bafe1a9fb0800c7cf39caccb0a453ca1c004635325cb41077dbd7
+    digest: 579e80b0ae2a9ac9d39972facb2fe8c053c696e8ed6e8bc1965355ae9c7e2fb6
     name: smtp
     type: application
     urls:
@@ -34,12 +44,12 @@ entries:
     version: 0.1.0
   sns-forwarder:
   - apiVersion: v2
-    created: "2020-11-10T16:16:45.057383+01:00"
+    created: "2020-11-10T17:03:41.103345+01:00"
     description: A Helm chart for SNS Forwarder
-    digest: 0f7039e7cec8142555d4bd27eb3fc4b978157475b10987b0bc1623ee32bbc4f2
+    digest: b3ed8b32d5fe9817dd06eb5c834a024b96c0ebcea81c09d7e9b34dab4c19cc69
     name: sns-forwarder
     type: application
     urls:
     - sns-forwarder-1.0.0.tgz
     version: 1.0.0
-generated: "2020-11-10T16:16:45.055598+01:00"
+generated: "2020-11-10T17:03:41.100878+01:00"
