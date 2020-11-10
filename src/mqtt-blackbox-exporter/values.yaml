@@ -5,7 +5,7 @@
 replicaCount: 1
 mqttHost: 192.168.1.1
 image:
-  repository: iam21h/mqtt-data-exporter:0.0.1
+  repository: iam21h/mqtt-data-exporter
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
