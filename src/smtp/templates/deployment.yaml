@@ -1,0 +1,95 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "smtp.fullname" . }}
+  labels:
+    {{- include "smtp.labels" . | nindent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      {{- include "smtp.selectorLabels" . | nindent 6 }}
+  template:
+    metadata:
+      labels:
+        {{- include "smtp.selectorLabels" . | nindent 8 }}
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      serviceAccountName: {{ include "smtp.serviceAccountName" . }}
+      securityContext:
+        {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      containers:
+        - name: {{ .Chart.Name }}
+          env:
+            # - name: GMAIL_USER
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: {{ include "smtp.fullname" . }}
+            #       key: username
+            # - name: GMAIL_PASSWORD
+            #   valueFrom:
+            #     secretKeyRef:
+            #       name: {{ include "smtp.fullname" . }}
+            #       key: password
+            - name: SMARTHOST_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "smtp.fullname" . }}
+                  key: address
+            - name: SMARTHOST_PORT
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "smtp.fullname" . }}
+                  key: port
+            - name: SMARTHOST_USER
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "smtp.fullname" . }}
+                  key: username
+            - name: SMARTHOST_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "smtp.fullname" . }}
+                  key: password
+            - name: SMARTHOST_ALIASES
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "smtp.fullname" . }}
+                  key: aliases
+            - name: RELAY_NETWORKS
+              value: 0.0.0.0/0
+            - name: PORT
+              value: "1025"
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: smtp
+              containerPort: 1025
+              protocol: TCP
+          # livenessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          # readinessProbe:
+          #   httpGet:
+          #     path: /
+          #     port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
