@@ -3,9 +3,9 @@ entries:
   mqtt-blackbox-exporter:
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2020-11-10T17:03:41.102368+01:00"
+    created: "2020-11-14T11:01:11.589045+01:00"
     description: A Helm chart for MQTT Blackbox Exporter
-    digest: 449ab5d766af37974a18e25e9e823d13096b17a9b11d60811c4a47df70a1ac9d
+    digest: 03efb91e09582f5677e8240790e988079124d8185e60e35d43901fad8f69bf91
     name: mqtt-blackbox-exporter
     type: application
     urls:
@@ -13,7 +13,7 @@ entries:
     version: 0.2.2
   - apiVersion: v2
     appVersion: 0.0.1
-    created: "2020-11-10T17:03:41.101849+01:00"
+    created: "2020-11-14T11:01:11.588583+01:00"
     description: A Helm chart for MQTT Blackbox Exporter
     digest: 58029d86fb26de39eaf4aca039bda8ff150829384f231a237e202a46a5c0c607
     name: mqtt-blackbox-exporter
@@ -23,7 +23,7 @@ entries:
     version: 0.2.1
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2020-11-10T17:03:41.101446+01:00"
+    created: "2020-11-14T11:01:11.587622+01:00"
     description: A Helm chart for MQTT Blackbox Exporter
     digest: c1a8b64d7e52c3599686813f80f3665034c50bc3a6ec35320a50f32ee8bdc5db
     name: mqtt-blackbox-exporter
@@ -31,12 +31,23 @@ entries:
     urls:
     - mqtt-blackbox-exporter-0.1.0.tgz
     version: 0.1.0
+  nginx:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2020-11-14T11:01:11.589563+01:00"
+    description: A Helm chart for Kubernetes
+    digest: 4c2381bda3a9b826e7224438c0964e39e1d151e09af8b3afa02f3429d18e61ac
+    name: nginx
+    type: application
+    urls:
+    - nginx-0.1.0.tgz
+    version: 0.1.0
   smtp:
   - apiVersion: v2
     appVersion: latest
-    created: "2020-11-10T17:03:41.102859+01:00"
+    created: "2020-11-14T11:01:11.589946+01:00"
     description: A Helm chart for SMTP
-    digest: 579e80b0ae2a9ac9d39972facb2fe8c053c696e8ed6e8bc1965355ae9c7e2fb6
+    digest: 393b72ad1b07e1f28b64ce75ce7d2adbf0ccdc31ffa2fae8e4d239ff34c6f20a
     name: smtp
     type: application
     urls:
@@ -44,12 +55,12 @@ entries:
     version: 0.1.0
   sns-forwarder:
   - apiVersion: v2
-    created: "2020-11-10T17:03:41.103345+01:00"
+    created: "2020-11-14T11:01:11.590408+01:00"
     description: A Helm chart for SNS Forwarder
-    digest: b3ed8b32d5fe9817dd06eb5c834a024b96c0ebcea81c09d7e9b34dab4c19cc69
+    digest: b654e756cd3b2be4fca33fa08bef4b85f9664d88edab446a9636530aea0eff09
     name: sns-forwarder
     type: application
     urls:
     - sns-forwarder-1.0.0.tgz
     version: 1.0.0
-generated: "2020-11-10T17:03:41.100878+01:00"
+generated: "2020-11-14T11:01:11.586566+01:00"
